@@ -1,0 +1,1 @@
+/Users/devinburke/Documents/Geolocation_Ember/Geolocation_Ember_WebApp/tmp/broccoli_merge_trees-input_base_path-E5UvBubg.tmp/2/geolocation-ember-web-app/tests/helpers/destroy-app.jshint.js

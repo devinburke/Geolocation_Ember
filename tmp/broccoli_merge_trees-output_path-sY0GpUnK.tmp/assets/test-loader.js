@@ -1,0 +1,1 @@
+/Users/devinburke/Documents/Geolocation_Ember/Geolocation_Ember_WebApp/bower_components/ember-cli-test-loader/test-loader.js
