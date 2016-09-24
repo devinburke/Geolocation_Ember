@@ -112,10 +112,12 @@ define('geolocation-ember-web-app/components/current-location', ['exports', 'emb
             var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             var distance = parseInt(earthRadius * c);
 
+            var distanceInMiles = distance / 1.609344;
+
             var distanceObject = {
                 lat: latitudeProjected,
                 lon: longitudeProjected,
-                distance: distance,
+                distance: parseInt(distanceInMiles),
                 id: this.get("distanceObjects").length
             };
             this.get("distanceObjects").pushObject(distanceObject);
@@ -519,7 +521,7 @@ define("geolocation-ember-web-app/templates/components/current-location", ["expo
             dom.appendChild(el1, el2);
             var el2 = dom.createComment("");
             dom.appendChild(el1, el2);
-            var el2 = dom.createTextNode("km\n                                ");
+            var el2 = dom.createTextNode("mi\n                                ");
             dom.appendChild(el1, el2);
             var el2 = dom.createElement("button");
             dom.setAttribute(el2, "class", "clear-button");
@@ -1059,7 +1061,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("geolocation-ember-web-app/app")["default"].create({"name":"geolocation-ember-web-app","version":"0.0.0+efc78d53"});
+  require("geolocation-ember-web-app/app")["default"].create({"name":"geolocation-ember-web-app","version":"0.0.0+e070756b"});
 }
 
 /* jshint ignore:end */

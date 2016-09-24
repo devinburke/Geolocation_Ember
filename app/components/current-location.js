@@ -82,10 +82,12 @@ export default Ember.Component.extend({
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         var distance = parseInt(earthRadius * c);
 
+        var distanceInMiles = distance / 1.609344;
+
         var distanceObject = {
             lat: latitudeProjected,
             lon: longitudeProjected,
-            distance: distance,
+            distance: parseInt(distanceInMiles),
             id: this.get("distanceObjects").length
         };
         this.get("distanceObjects").pushObject(distanceObject);

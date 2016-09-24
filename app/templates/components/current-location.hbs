@@ -36,7 +36,7 @@
                         {{#each distanceObjects as |distanceObject|}}
                             <li id="list-{{distanceObject.id}}">Longitude: {{distanceObject.lon}} 
                                 Latitude: {{distanceObject.lat}}
-                                Distance: {{distanceObject.distance}}km
+                                Distance: {{distanceObject.distance}}mi
                                 <button class="clear-button" {{action 'removeDistance' distanceObject.id }}>CLEAR</button>
                             </li>
                         {{else}}
