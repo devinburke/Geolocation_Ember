@@ -3,6 +3,8 @@
 # compiled output
 /dist
 /tmp
+/dist
+# For now ignoring any dist files created
 
 # dependencies
 /node_modules
