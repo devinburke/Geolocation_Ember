@@ -2,5 +2,8 @@
 @import 'foundation';
 @include foundation-everything;
 .background {
-    background: red;
+    background: green;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }

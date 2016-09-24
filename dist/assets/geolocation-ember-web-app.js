@@ -345,8 +345,7 @@ define("geolocation-ember-web-app/templates/geolocator", ["exports"], function (
     return {
       meta: {
         "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
+          "name": "triple-curlies"
         },
         "revision": "Ember@2.6.2",
         "loc": {
@@ -356,8 +355,8 @@ define("geolocation-ember-web-app/templates/geolocator", ["exports"], function (
             "column": 0
           },
           "end": {
-            "line": 5,
-            "column": 6
+            "line": 10,
+            "column": 0
           }
         },
         "moduleName": "geolocation-ember-web-app/templates/geolocator.hbs"
@@ -368,12 +367,12 @@ define("geolocation-ember-web-app/templates/geolocator", ["exports"], function (
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("hello world\n\n");
-        dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1, "class", "background");
-        var el2 = dom.createTextNode("\n    hello world\n");
+        var el2 = dom.createTextNode("\n\n\n\n\n\n\n\n");
         dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -457,7 +456,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("geolocation-ember-web-app/app")["default"].create({"name":"geolocation-ember-web-app","version":"0.0.0+89331384"});
+  require("geolocation-ember-web-app/app")["default"].create({"name":"geolocation-ember-web-app","version":"0.0.0+f6f18214"});
 }
 
 /* jshint ignore:end */
