@@ -1,6 +1,6 @@
 /* jshint ignore:start */
 
-window.EmberENV = {"EXTEND_PROTOTYPES":{"Date":false},"FEATURES":{}};
+window.EmberENV = {"EXTEND_PROTOTYPES":{"Date":false,"Array":true},"FEATURES":{}};
 var runningTests = false;
 
 

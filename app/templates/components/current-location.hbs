@@ -1,0 +1,54 @@
+    <div class="header">
+        Your Current Location:
+    </div>
+    {{#if locationFound}}
+    <div class="row">   
+        <div class="small-12 medium-8 large-6 small-centered columns">
+            <div class="location-main">
+                <div class="location-description">
+                        Country: {{locationObject.country}}
+                        <br>
+                        City: {{locationObject.city}}
+                        <br>
+                        ZipCode: {{locationObject.zip}}
+                        <br>
+                        Lat: {{locationObject.lat}}
+                        <br>
+                        Lon: {{locationObject.lon}}
+                    </div>
+                    <div class="new-location-form">
+                        <form>
+                        <label class = "form-labels" for="longLatInput">Find Distance To New Location:</label>
+                        <label class = "form-description" for="longLatInput">* Use format Lon, Lat (example: "42.232, -83.324")</label>
+                        {{#if wrongFormat}}
+                        <label class = "form-description" for="longLatInput">{{inputError}}</label>
+                        {{/if}}
+                        {{input value=longLat  id="longLatInput" placeholder='Enter Lat , Lon' tabindex="1" type='text'}}
+                        <button class="form-button" {{action 'findNewDistance'}} >
+                            Get Distance
+                        </button>
+                    </form>
+                </div>
+
+                <div class="distance-list">
+                    <h2>Location Distances</h2>
+                    <ol>
+                        {{#each distanceObjects as |distanceObject|}}
+                            <li id="list-{{distanceObject.id}}">Longitude: {{distanceObject.lon}} 
+                                Latitude: {{distanceObject.lat}}
+                                Distance: {{distanceObject.distance}}km
+                                <button class="clear-button" {{action 'removeDistance' distanceObject.id }}>CLEAR</button>
+                            </li>
+                        {{else}}
+                            No Saved Distances
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+       </div>
+    </div>
+    {{else if showErrorMessage}}
+            <div class="error-message">
+               {{errorMessage}}
+            </div>
+    {{/if}}
