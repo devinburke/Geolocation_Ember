@@ -81,7 +81,7 @@ define('geolocation-ember-web-app/components/current-location', ['exports', 'emb
             },
 
             removeDistance: function removeDistance(id) {
-                var arrayId = $("#list-" + id).index();
+                var arrayId = _ember['default'].$("#list-" + id).index();
                 this.get("distanceObjects").removeAt(arrayId);
             }
         },
@@ -995,7 +995,7 @@ define("geolocation-ember-web-app/templates/index", ["exports"], function (expor
     };
   })());
 });
-define('geolocation-ember-web-app/utils/ajaxHelper', ['exports', 'geolocation-ember-web-app/config/environment', 'ember'], function (exports, _geolocationEmberWebAppConfigEnvironment, _ember) {
+define('geolocation-ember-web-app/utils/ajaxHelper', ['exports', 'ember'], function (exports, _ember) {
 
     var ajaxHelper = {
         makeRequest: function makeRequest(url, data, type) {
@@ -1059,7 +1059,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("geolocation-ember-web-app/app")["default"].create({"name":"geolocation-ember-web-app","version":"0.0.0+ef0a8555"});
+  require("geolocation-ember-web-app/app")["default"].create({"name":"geolocation-ember-web-app","version":"0.0.0+efc78d53"});
 }
 
 /* jshint ignore:end */

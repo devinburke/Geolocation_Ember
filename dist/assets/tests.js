@@ -13,7 +13,7 @@ define('geolocation-ember-web-app/tests/components/current-location.jshint', ['e
   QUnit.module('JSHint | components/current-location.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/current-location.js should pass jshint.\ncomponents/current-location.js: line 20, col 113, Expected an assignment or function call and instead saw an expression.\ncomponents/current-location.js: line 21, col 87, Expected an assignment or function call and instead saw an expression.\ncomponents/current-location.js: line 22, col 86, Expected an assignment or function call and instead saw an expression.\ncomponents/current-location.js: line 27, col 15, Missing semicolon.\ncomponents/current-location.js: line 52, col 27, \'$\' is not defined.\n\n5 errors');
+    assert.ok(true, 'components/current-location.js should pass jshint.');
   });
 });
 define('geolocation-ember-web-app/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -360,7 +360,7 @@ define('geolocation-ember-web-app/tests/utils/ajaxHelper.jshint', ['exports'], f
   QUnit.module('JSHint | utils/ajaxHelper.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'utils/ajaxHelper.js should pass jshint.\nutils/ajaxHelper.js: line 1, col 8, \'ENV\' is defined but never used.\n\n1 error');
+    assert.ok(true, 'utils/ajaxHelper.js should pass jshint.');
   });
 });
 /* jshint ignore:start */

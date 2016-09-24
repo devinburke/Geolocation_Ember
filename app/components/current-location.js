@@ -24,7 +24,7 @@ export default Ember.Component.extend({
                     localStorage.currentLocation = JSON.stringify(self.get("locationObject"));
                     console.log(localStorage.currentLocation);
                 }
-            })
+            });
         }
         if (localStorage.getItem("distanceObjects")) {
             this.set("distanceObjects", JSON.parse(localStorage.distanceObjects));
@@ -49,7 +49,7 @@ export default Ember.Component.extend({
         },
 
         removeDistance(id) {
-            var arrayId = $("#list-" + id).index();
+            var arrayId = Ember.$("#list-" + id).index();
             this.get("distanceObjects").removeAt(arrayId);
         }
     },
